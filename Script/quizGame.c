@@ -4,7 +4,7 @@
 #include <time.h>
 
 // Created functions ask and answer each questions
-void question7 () 
+void question7() 
 {
     char answer; 
     printf("Question #6: \n");
