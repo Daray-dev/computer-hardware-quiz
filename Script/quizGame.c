@@ -4,7 +4,7 @@
 #include <time.h>
 
 // Created functions ask and answer each questions
-void question7() 
+int question7() 
 {
     char answer; 
     printf("Question #6: \n");
@@ -21,7 +21,7 @@ void question7()
     }
 }
 // Created functions ask and answer each questions
-void question6() 
+int question6() 
 {
     char answer;
     printf("Question #6: \n");
@@ -38,7 +38,7 @@ void question6()
     }    
 }
 // Created functions ask and answer each questions
-void question5() 
+int question5() 
 {
     char answer;
     printf("Question #5: \n");
@@ -55,7 +55,7 @@ void question5()
     }
 }
 // Created functions ask and answer each questions
-void question4() 
+int question4() 
 {
     char answer;
     printf("Question #4: \n");
@@ -72,7 +72,7 @@ void question4()
     }  
 }
 // Created functions ask and answer each questions
-void question3() 
+int question3() 
 {
     char answer;
     printf("Question #3: \n");
@@ -89,7 +89,7 @@ void question3()
     }
 }
 // Created functions ask and answer each questions
-void question2() 
+int question2() 
 {
     char answer;
     printf("Question #2: \n");
@@ -106,7 +106,7 @@ void question2()
     }
 }
 // Created functions ask and answer each questions
-void startQuiz() 
+int startQuiz() 
 {   
     char answer;
     printf("Question #1: \n");
