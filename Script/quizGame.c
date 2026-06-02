@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include <math.h>
-#include <stdlib.h>
-#include <time.h>
 
 // Created functions ask and answer each questions
 int question7() 
@@ -15,9 +13,11 @@ int question7()
 // output for the correct answer
     if (answer =='d') {
         printf("Bravo, 'd' is correct \n", &answer);
+        return 1;
     }
     else {
         printf("Incorrect, the correct answer is 'd' \n");
+        return 0;
     }
 }
 // Created functions ask and answer each questions
@@ -32,9 +32,11 @@ int question6()
  // output for the correct answer   
     if (answer =='c') {
         printf("Bravo, 'c' is correct \n", &answer);
+        return 1;
     }
     else {
         printf("Incorrect, the correct answer is 'c' \n");
+        return 0;
     }    
 }
 // Created functions ask and answer each questions
@@ -49,9 +51,11 @@ int question5()
 // output for the correct answer    
     if (answer =='d') {
         printf("Bravo, 'd' is correct \n", &answer);
+        return 1;
     }
     else {
         printf("Incorrect, the correct answer is 'd' \n");
+        return 0;
     }
 }
 // Created functions ask and answer each questions
@@ -66,9 +70,11 @@ int question4()
  // output for the correct answer   
     if (answer =='c') {
         printf("Bravo, 'c' is correct \n", &answer);
+        return 1;
     }
     else {
         printf("Incorrect, the correct answer is 'c' \n");
+        return 0;
     }  
 }
 // Created functions ask and answer each questions
@@ -83,9 +89,11 @@ int question3()
 // output for the correct answer    
     if (answer =='b') {
         printf("Bravo, 'b' is correct \n", &answer);
+        return 1;
     }
     else {
         printf("Incorrect, the correct answer is 'b' \n");
+        return 0;
     }
 }
 // Created functions ask and answer each questions
@@ -100,9 +108,11 @@ int question2()
 // output for the correct answer    
     if (answer =='a') {
         printf("Bravo, 'a' is correct \n", &answer);
+        return 1;
     }
     else {
         printf("Incorrect, the correct answer is 'a' \n");
+        return 0;
     }
 }
 // Created functions ask and answer each questions
@@ -117,9 +127,11 @@ int startQuiz()
 // output for the correct answer
     if (answer =='d') {
         printf("Bravo, 'd' is correct \n", &answer);
+        return 1;
     }
     else {
         printf("Incorrect, the correct answer is 'd' \n");
+        return 0;
     }
 }
 // Created start function to begin your quiz
@@ -141,8 +153,9 @@ char welcomeGreeting()
    }
   else  {
       printf("Maybe Next Time!\n"); 
-      return 0;
+      
     }
+    return userSelect;
 
 }
 
@@ -150,14 +163,20 @@ int main()
 {
 // Created to run sequence of functions only if 'y' is selected initally
    char choice = welcomeGreeting();
-  if (choice == 'y' ) {
-   startQuiz();
-   question2(); 
-   question3();
-   question4();
-   question5();
-   question6();
-   question7();
+   int score = 0;
+    if (choice == 'y' ) {
+   score += startQuiz();
+   score += question2(); 
+   score += question3();
+   score += question4();
+   score += question5();
+   score += question6();
+   score += question7();
+  int correct = score += 1;
+  int wrong = score != 1;
+   printf("End of quiz! Lets see your results\n");
+   printf("You got %d out of 7 correct\n", correct);
+  
   } 
   else {
     return 0;
