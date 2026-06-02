@@ -141,6 +141,7 @@ char welcomeGreeting()
    }
   else  {
       printf("Maybe Next Time!\n"); 
+      return 0;
     }
 
 }
